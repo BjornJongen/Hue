@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="demoLocations1_00000000-0000-0000-0000-000000000000.json" />
+    <None Remove="demoLocations2_00000000-0000-0000-0000-000000000000.json" />
+    <None Remove="sterDemoLocations1_00000000-0000-0000-0000-000000000000.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="demoLocations1_00000000-0000-0000-0000-000000000000.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demoLocations2_00000000-0000-0000-0000-000000000000.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sterDemoLocations1_00000000-0000-0000-0000-000000000000.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HueApi" Version="1.5.0" />
+    <PackageReference Include="HueApi.ColorConverters" Version="1.5.0" />
+    <PackageReference Include="HueApi.Entertainment" Version="1.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HueLightDJ.Effects\HueLightDJ.Effects.csproj" />
+    <ProjectReference Include="..\HueLightDJ.Services.Interfaces\HueLightDJ.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
